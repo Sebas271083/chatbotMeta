@@ -80,9 +80,9 @@ const main = async () => {
     const adapterFlow = createFlow([flowPrincipal])
 
     const adapterProvider = createProvider(MetaProvider, {
-        token:'tokenn',
-        numberId:121073564242575,
-        verifyToken:'nuevaseras',
+        token:process.env.JWTOKEN,
+        numberId:process.env.NUMBER_ID,
+        verifyToken:process.env.VERIFY_TOKEN,
     })
 
     createBot({
